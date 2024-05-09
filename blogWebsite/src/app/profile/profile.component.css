@@ -1,0 +1,134 @@
+/* Global Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+
+#form {
+  width: 300px;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: #fff;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6b6b;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #ff4d4d;
+}
+
+p {
+  margin-top: 15px;
+  color: #fff;
+}
+
+a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#error {
+  color: darkred;
+}
+
+/* Profile area styles */
+#profile {
+  /* max-width: 400px; */
+  /* height: 88vh; */
+  height: 40vh;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: 5vh auto; /* Center the profile horizontally and keep some space from top */
+}
+
+#profile h2 {
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+
+.container1{
+  height: 88vh;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-info p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+.logout-btn {
+  padding: 10px 20px;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #ff4d4d;
+}

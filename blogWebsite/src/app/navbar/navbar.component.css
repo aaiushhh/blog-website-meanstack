@@ -1,0 +1,72 @@
+/* Navbar Container */
+#body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 20px;
+  background-color: #000000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  height: 12vh;
+}
+
+/* Left Side (Home Link) */
+#left {
+  flex: 1;
+}
+
+#left a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 20px;
+}
+
+#left a:hover {
+  color: #ff4d4d;
+}
+
+/* Search Input */
+#search {
+  flex: 2;
+  margin: 0 10px;
+}
+
+#search input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-size: 16px;
+}
+
+#search input:focus {
+  border-color: #ff4d4d;
+}
+
+/* Right Side (Login Link) */
+#right {
+  flex: 1;
+  text-align: right;
+}
+
+#right a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  background-color: #ff6b6b; /* Pink-Red color */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+}
+
+#right a:hover {
+  background-color: #ff4d4d; 
+  color: #fff;
+}

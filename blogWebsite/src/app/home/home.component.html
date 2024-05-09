@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div *ngIf="!blog">
+    <div id="header" >
+        <h1>Welcome to Blog Dashboard</h1>
+        <a href="add-post" class="add-post-btn">Add Post</a>
+      </div>
+      <div id="main">
+        <section class="recent-posts">
+          <h3>Recent Posts</h3>
+          {{search}}
+          <div class="post" *ngFor="let post of recentPosts">
+            <h3>{{ post.title }}</h3>
+            <p >{{ post.blog }}</p>
+            <a (click)="display(post.username,post.title,post.blog)" >Read More</a>
+          </div>
+        </section>
+
+      </div>
+      <div id="footer">
+        <p>&copy; 2024 Your Blog</p>
+      </div>
+    </div>
+    <!-- blog page -->
+    <div class="blog-container" *ngIf="blog">
+      <div class="go-back-btn">
+        <a href="" >Go Back</a>
+      </div>
+      <div  class="blog-content">
+        <h2>{{ displayTitle |uppercase}}</h2>
+        <p>By {{ displayUserName |titlecase}}</p>
+        <div class="blog-text">
+          {{ displayBlog }}
+        </div>
+      </div>
+    </div>
+</body>
+</html>

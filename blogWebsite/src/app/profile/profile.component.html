@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  <div class="container" *ngIf="login">
+  <h1>Login</h1>
+  <div id="form">
+      <div class="input-group">
+          <label for="username">Username:</label>
+          <input type="text" [(ngModel)]="username" id="username" name="username" placeholder="Enter your username">
+      </div>
+      <div class="input-group">
+          <label for="password">Password:</label>
+          <input type="password" [(ngModel)]="password" id="password" name="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" (click)="validateForm()">Login</button>
+      <p id="error">{{Error}}</p>
+      <p>Don't have an account?<a href="sign-up">Sign Up</a></p>
+  </div>
+</div>
+<div class="container1" *ngIf="!login">
+  <div id="profile">
+      <h2>User Profile</h2>
+      <div class="profile-info">
+          <p><strong>Username:</strong> {{username}}</p>
+          <p><strong>Email:</strong> {{email}}</p>
+      </div>
+      <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+</div>
+</body>
+</html>

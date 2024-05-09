@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <app-navbar (getSearchEvent)="getSearch($event)"></app-navbar>
+  <div *ngIf="!blog">
+  <div id="searchbox" *ngIf="searchTab">
+    
+      <div id="post" *ngFor="let post of searchBlogs">
+        <h3 id="searchtitle" (click)="display(post.username,post.title,post.blog)">{{ post.title }}</h3>
+        <!-- <p >{{ post.blog }}</p> -->
+        <!-- <a  >Read More</a> -->
+      </div>
+    
+  </div>
+   
+  <router-outlet></router-outlet>
+</div>
+<!-- blog page -->
+<div class="blog-container" *ngIf="blog">
+  <div class="go-back-btn">
+    <a href="" >Go Back</a>
+  </div>
+  <div  class="blog-content">
+    <h2>{{ displayTitle |uppercase}}</h2>
+    <p>By {{ displayUserName |titlecase}}</p>
+    <div class="blog-text">
+      {{ displayBlog }}
+    </div>
+  </div>
+</div>
+</body>
+</html>
